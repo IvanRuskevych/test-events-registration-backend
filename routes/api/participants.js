@@ -3,6 +3,6 @@ const {addNewParticipant, findAllParticipantsByEventId} = require("../../control
 const router = express.Router();
 
 router.post('/', addNewParticipant);
-router.get('/:eventId', findAllParticipantsByEventId);
+router.get('/', findAllParticipantsByEventId);
 
 module.exports = router;
