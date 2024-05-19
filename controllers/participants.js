@@ -12,7 +12,7 @@ const addNewParticipant = async (req, res) => {
 }
 
 const findAllParticipantsByEventId = async (req, res) => {
-    const result = await ParticipantModel.find({},'-createdAt -updatedAt -_id')
+    const result = await ParticipantModel.find({},'-createdAt -updatedAt')
 
     if (!result){
         throw HttpError(404, 'Participants not found')
